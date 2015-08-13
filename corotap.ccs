@@ -261,6 +261,22 @@
             <Image Name="green.png" />
             <Image Name="red.png" />
             <Image Name="yellow.png" />
+            <Image Name="skill1.png" />
+            <Image Name="skill2.png" />
+            <Image Name="skill3.png" />
+            <Image Name="skill4.png" />
+            <Image Name="skill5.png" />
+            <Image Name="skill6.png" />
+            <Image Name="skill1_ov.png" />
+            <Image Name="skill2_ov.png" />
+            <Image Name="skill3_ov.png" />
+            <Image Name="skill4_ov.png" />
+            <Image Name="skill5_ov.png" />
+            <Image Name="skill6_ov.png" />
+            <Image Name="setting.png" />
+            <Image Name="social.png" />
+            <Image Name="setting_ov.png" />
+            <Image Name="social_ov.png" />
           </Folder>
         </Folder>
         <Folder Name="Layer" />

@@ -1,5 +1,6 @@
 #include "AppDelegate.h"
-#include "HelloWorldScene.h"
+#include "TitleScene.h"
+#include "GLViewUtil.h"
 
 USING_NS_CC;
 
@@ -30,8 +31,10 @@ bool AppDelegate::applicationDidFinishLaunching() {
         glview = GLViewImpl::createWithRect("corotap", Rect(0, 0, 640, 1136));
         director->setOpenGLView(glview);
     }
-
-    director->getOpenGLView()->setDesignResolutionSize(640, 1136, ResolutionPolicy::SHOW_ALL);
+    
+    // ★横640は維持して1136比率でフィットした画面にする（縦横の黒棒をなくす）
+    auto fitSize = GLViewUtil::calcFitDesignResolutionSize(640, 1136, GLViewUtil::FitType::WIDTH);
+    glview->setDesignResolutionSize(fitSize.width, fitSize.height, ResolutionPolicy::SHOW_ALL);
 
     // turn on display FPS
     director->setDisplayStats(true);
@@ -42,7 +45,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
     FileUtils::getInstance()->addSearchPath("res");
 
     // create a scene. it's an autorelease object
-    auto scene = HelloWorld::createScene();
+    auto scene = TitleScene::createScene();
 
     // run
     director->runWithScene(scene);
