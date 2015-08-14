@@ -57,6 +57,12 @@ public:
     
     // 変数
     CC_SYNTHESIZE(int, _stage, Stage);
+    CC_SYNTHESIZE(int, _tapDPS, TapDPS);
+    CC_SYNTHESIZE(int, _autoDPS, AutoDPS);
+    CC_SYNTHESIZE(int, _totalDPS, TotalDPS);
+    CC_SYNTHESIZE(int, _totalGold, TotalGold);
+    CC_SYNTHESIZE(int, _totalJewel, TotalJewel);
+    CC_SYNTHESIZE(int, _totalHeart, TotalHeart);
     CC_SYNTHESIZE(int, _nowKillEnemy, NowKillEnemy);
     CC_SYNTHESIZE(int, _stageEnemy, StageEnemy);
     
